@@ -10,25 +10,51 @@ html {
   margin: 0;
   box-sizing: inherit; }
 
-.content {
-  display: flex; }
+.app {
+  min-height: 100vh;
+  line-height: 1.4;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column; }
 
-.main {
-  width: 75%;
-  background-color: pink; }
+ul {
+  padding: 2em; }
 
-.aside {
-  width: 25%;
-  background-color: tomato; }
+li {
+  white-space: nowrap; }
 
-@media screen and (max-width: 640px) {
-  .content {
-    flex-direction: column; }
+header,
+footer {
+  padding: 2rem;
+  height: 5rem;
+  background-color: steelblue;
+  color: white; }
 
-  .main, .aside {
-    width: 100%; }
+main {
+  display: flex;
+  flex-direction: column; }
 
-  .aside {
-    order: -1; } }
+nav,
+aside {
+  padding: 2rem;
+  background-color: deepskyblue;
+  order: 1; }
+
+nav {
+  order: -1; }
+
+section {
+  background-color: #ddd;
+  padding: 2rem; }
+
+@media screen and (min-width: 64em) {
+  main {
+    flex-direction: row; }
+
+  section {
+    flex: 1 0 60%; }
+
+  nav, aside {
+    flex: 1 0 20%; } }
 
 /*# sourceMappingURL=style.css.map */

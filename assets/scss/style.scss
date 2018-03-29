@@ -14,28 +14,62 @@ html{
 }
 // End reset
 
-.content{
+.app{
+    min-height: 100vh;
+    line-height: 1.4;
+    background-color: #eee;
+
+    // Propiedades del modelo flexbox
     display: flex;
+    flex-direction: column;
 }
 
-.main{
-    width: 75%;
-    background-color: pink;
+ul{
+    padding: 2em;
 }
 
-.aside{
-    width: 25%;
-    background-color: tomato;
+li{
+    white-space: nowrap;
+}
+header,
+footer{
+    padding: 2rem;
+    height: 5rem;
+    background-color: steelblue;
+    color: white;
+    
 }
 
-@media screen and (max-width: 640px){
-    .content{
-        flex-direction: column;
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+nav,
+aside{
+    padding: 2rem;
+    background-color: deepskyblue;
+
+    order: 1;
+}
+
+nav{ order: -1; }
+
+section{
+    background-color: #ddd;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 64em){
+    // cuando la mínima anchura sean 64em o 1024px
+    main{
+        flex-direction: row;
     }
-    .main, .aside{
-        width: 100%;
+    section{
+        flex: 1 0 60%;
     }
-    .aside{
-        order: -1;
+    nav, aside{
+        // order: 0;
+        flex: 1 0 20%;
     }
 }
