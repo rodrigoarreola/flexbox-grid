@@ -1,10 +1,61 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px; }
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+/*
+
+# Propiedades de los elementos padres: 
+
+Flexbox container
+    display:flex | inline-flex;
+        -> Define una caja flexible de bloque o de línea
+    
+    flex-direction: row | row-reverse | column | column-reverse;
+        -> Define el eje principal y el transversal de la caja flexible
+        -> row x - principal | y - transversal
+        -> column x - transversal | y - principal
+    
+    flex-wrap: nowrap | wrap | wrap-reverse;
+        -> Determina la existencia o no de saltos de línea y su sentido
+    
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+        -> Alineación de los hijos en el eje principal (espacio sobrante)
+
+    align-items: stretch | flex-start | flex-end | center | baseline;
+        -> Alineacion de los hijos en el eje transversal (espacio sobrante) 
+        -> cuando NO HAY saltos de línea `flex-wrap: no-wrap;`
+
+    align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+        -> Alineación de los hijos en el eje transversal (espacio sobrante)
+        -> cuando SI HAY saltos de línea `flex-wrap: wrap | wrap-reverse;`
+
+*/
 .container {
+  padding: 1rem;
+  margin: auto;
+  width: 80vw;
+  height: 50vh;
+  border: medium solid #333;
+  background-color: steelblue;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row-reverse; }
+  justify-content: space-between; }
 
 .item {
-  width: 200px;
-  border: 1px solid red; }
+  border: thin solid #333;
+  font-size: 2rem;
+  background-color: deepskyblue;
+  width: 15%;
+  height: 30%; }
 
 /*# sourceMappingURL=style.css.map */

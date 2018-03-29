@@ -2,6 +2,8 @@
 
 ## Practice 1
 
+[link to practice](https://codepen.io/rodrigoarreola/pen/bvLWBZ) 
+
 ### Content
 1. Flex container
 2. Flex item
