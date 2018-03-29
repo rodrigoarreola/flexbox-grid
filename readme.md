@@ -46,6 +46,15 @@
 6. `align-content: stretch | flex-start | flex-end | center | space-between | space-around;`  
     Alineación de los hijos en el eje transversal (espacio sobrante) cuando SI HAY saltos de línea `(flex-wrap: wrap | wrap-reverse;)`
 
+## Practice 3
+
+Example of how to use `flex-direction` and `order` in order to build a simple template  
+with a `main` tag and an `aside` tag
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/ypuqd5wr/)
+
+### Cheat sheet
+
 #### Propiedades de los elementos hijos
 
 1. `order: $num;`  
@@ -71,5 +80,14 @@
     de su contenedor esta propiedad sobreescribe la alineación  
     por defecto establecida en `align-items` por el contenedor
 
+## Practice 4
 
+In this practice I've build a holy grail layout with flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/L7mp1j1h/)
     
+## Practice 5
+
+In this practice I've build a simple animated slider only with flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/wvmph1LL/)
