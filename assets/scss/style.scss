@@ -13,53 +13,29 @@ html{
     box-sizing: inherit;
 }
 // End reset
-/*
 
-# Propiedades de los elementos padres: 
-
-Flexbox container
-    display:flex | inline-flex;
-        -> Define una caja flexible de bloque o de línea
-    
-    flex-direction: row | row-reverse | column | column-reverse;
-        -> Define el eje principal y el transversal de la caja flexible
-        -> row x - principal | y - transversal
-        -> column x - transversal | y - principal
-    
-    flex-wrap: nowrap | wrap | wrap-reverse;
-        -> Determina la existencia o no de saltos de línea y su sentido
-    
-    justify-content: flex-start | flex-end | center | space-between | space-around;
-        -> Alineación de los hijos en el eje principal (espacio sobrante)
-
-    align-items: stretch | flex-start | flex-end | center | baseline;
-        -> Alineacion de los hijos en el eje transversal (espacio sobrante) 
-        -> cuando NO HAY saltos de línea `flex-wrap: no-wrap;`
-
-    align-content: stretch | flex-start | flex-end | center | space-between | space-around;
-        -> Alineación de los hijos en el eje transversal (espacio sobrante)
-        -> cuando SI HAY saltos de línea `flex-wrap: wrap | wrap-reverse;`
-
-*/
-.container{
-    padding: 1rem;
-    margin: auto;
-    width: 80vw;
-    height: 50vh;
-    border: medium solid #333;
-    background-color: steelblue;
-
+.content{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.item{
-    border: thin solid #333;
-    font-size: 2rem;
-    background-color: deepskyblue;
+.main{
+    width: 75%;
+    background-color: pink;
+}
 
-    width: 15%;
-    height: 30%;
+.aside{
+    width: 25%;
+    background-color: tomato;
+}
+
+@media screen and (max-width: 640px){
+    .content{
+        flex-direction: column;
+    }
+    .main, .aside{
+        width: 100%;
+    }
+    .aside{
+        order: -1;
+    }
 }
