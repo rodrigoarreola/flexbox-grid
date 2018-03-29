@@ -10,51 +10,72 @@ html {
   margin: 0;
   box-sizing: inherit; }
 
-.app {
-  min-height: 100vh;
-  line-height: 1.4;
-  background-color: #eee;
+.page-title {
+  text-align: center;
+  line-height: 2;
   display: flex;
-  flex-direction: column; }
+  align-items: center;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto; }
+  .page-title::before, .page-title::after {
+    content: "";
+    flex: auto;
+    height: .1em;
+    display: block; }
+  .page-title::before {
+    margin-right: 0.5em;
+    background: linear-gradient(to right, steelblue, #00ff6a); }
+  .page-title::after {
+    margin-left: 0.5em;
+    background: linear-gradient(to left, steelblue, #00ff6a); }
 
-ul {
-  padding: 2em; }
+.slider {
+  width: 50vw;
+  height: 80vh;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden; }
 
-li {
-  white-space: nowrap; }
-
-header,
-footer {
-  padding: 2rem;
-  height: 5rem;
-  background-color: steelblue;
-  color: white; }
-
-main {
+.slider__content {
   display: flex;
-  flex-direction: column; }
+  width: calc(100% * 3);
+  animation: slider 10s linear infinite;
+  position: relative;
+  left: 0; }
 
-nav,
-aside {
-  padding: 2rem;
-  background-color: deepskyblue;
-  order: 1; }
+.slider__item {
+  position: relative;
+  width: 100%; }
 
-nav {
-  order: -1; }
+.slider__img {
+  width: 100%;
+  object-fit: cover;
+  display: block; }
 
-section {
-  background-color: #ddd;
-  padding: 2rem; }
+.slider__caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1em;
+  position: absolute;
+  bottom: -5em;
+  left: 1em;
+  animation: caption calc(10s / 3) linear infinite; }
 
-@media screen and (min-width: 64em) {
-  main {
-    flex-direction: row; }
-
-  section {
-    flex: 1 0 60%; }
-
-  nav, aside {
-    flex: 1 0 20%; } }
+@keyframes slider {
+  0%, 30% {
+    left: 0%; }
+  33%, 63% {
+    left: -100%; }
+  66%, 97% {
+    left: -200%; } }
+@keyframes caption {
+  0%, 15% {
+    opacity: 0; }
+  20%, 90% {
+    bottom: 1em;
+    opacity: 1; }
+  91%, 100% {
+    opacity: 0; } }
 
 /*# sourceMappingURL=style.css.map */

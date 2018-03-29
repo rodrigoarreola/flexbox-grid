@@ -14,62 +14,103 @@ html{
 }
 // End reset
 
-.app{
-    min-height: 100vh;
-    line-height: 1.4;
-    background-color: #eee;
+$sliderItems: 3;
+$sliderTime: 10s;
 
-    // Propiedades del modelo flexbox
+.page-title{
+    text-align: center;
+    line-height: 2;
     display: flex;
-    flex-direction: column;
-}
+    align-items: center;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
 
-ul{
-    padding: 2em;
-}
+    &::before, &::after{
+        content: "";
+        flex: auto;
+        height: .1em;
+        display: block;
+        
+    }
 
-li{
-    white-space: nowrap;
-}
-header,
-footer{
-    padding: 2rem;
-    height: 5rem;
-    background-color: steelblue;
-    color: white;
+    &::before{
+        margin-right: 0.5em;
+        background: linear-gradient(to right, steelblue, rgb(0, 255, 106));
+    }
+
+    &::after{
+        margin-left: 0.5em;
+        background: linear-gradient(to left, steelblue, rgb(0, 255, 106));
+    }
     
 }
 
-main{
+.slider{
+    width: 50vw;
+    height: 80vh;
+    margin-right: auto;
+    margin-left: auto;
+
+    // Para que los elementos desaparezcan del contenido
+    overflow: hidden;
+    
+
+}
+
+.slider__content{
+    // Para que los hijos se alinien uno al lado del otro
     display: flex;
-    flex-direction: column;
+    width: calc(100% * #{$sliderItems});
+    animation: slider #{$sliderTime} linear infinite;
+    position: relative;
+    left: 0;
+    
 }
 
-nav,
-aside{
-    padding: 2rem;
-    background-color: deepskyblue;
-
-    order: 1;
+.slider__item{
+    position: relative;
+    width: 100%;
 }
 
-nav{ order: -1; }
-
-section{
-    background-color: #ddd;
-    padding: 2rem;
+.slider__img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-@media screen and (min-width: 64em){
-    // cuando la mínima anchura sean 64em o 1024px
-    main{
-        flex-direction: row;
+.slider__caption{
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 1em;
+    position: absolute;
+    bottom: -5em;
+    left: 1em;
+    animation: caption calc(#{$sliderTime} / #{$sliderItems}) linear infinite;
+}
+
+@keyframes slider{
+    0%, 30%{
+        left: 0%;
     }
-    section{
-        flex: 1 0 60%;
+    33%, 63%{
+        left: -100%;
     }
-    nav, aside{
-        // order: 0;
-        flex: 1 0 20%;
+    66%, 97%{
+        left: -200%;
     }
 }
+
+ @keyframes caption{
+     0%, 15%{
+         opacity: 0;
+     }
+    20%, 90%{
+        bottom: 1em;
+        opacity: 1;
+    }
+
+    91%, 100%{
+        opacity: 0;
+    }
+ }
