@@ -1,0 +1,20 @@
+{
+  "name": "flexbox-css-grid",
+  "version": "1.0.0",
+  "description": "Playground for lean the basic of flexbox and css grid",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "sass": "sass --watch assets/scss:assets/css"
+  },
+  "keywords": [
+    "flexbox",
+    "css-grid"
+  ],
+  "author": "Rodrigo Arreola",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "sass": "^1.1.1"
+  }
+}
