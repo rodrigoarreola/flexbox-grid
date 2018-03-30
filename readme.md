@@ -127,4 +127,10 @@ Build of a blog layout, the classes were set according the BEM methodology
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/yve0qpuq/)
 
+## Practice 10
+
+Simple example of fixed header and footer using flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/ypyok7xu/)
+
 
