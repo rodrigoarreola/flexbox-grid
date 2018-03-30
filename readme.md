@@ -121,4 +121,10 @@ This little practice it's about total center in elements with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/jbhgg5ox/)
 
+## Practice 9
+
+Build of a blog layout, the classes were set according the BEM methodology
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/yve0qpuq/)
+
 
