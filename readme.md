@@ -91,3 +91,8 @@ In this practice I've build a holy grail layout with flexbox
 In this practice I've build a simple animated slider only with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/wvmph1LL/)
+
+## Practice 6
+
+In this practice I've build a simple splited layout
+[link to practice](https://jsfiddle.net/rodrigoarreola/4Lp8nLbg/)
