@@ -133,4 +133,12 @@ Simple example of fixed header and footer using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/ypyok7xu/)
 
+## Practice 11
+
+Example of how hard it is to make a grid with only flexbox, (this makes nothing at all)
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/zc8fatff/)
+
+
+
 
