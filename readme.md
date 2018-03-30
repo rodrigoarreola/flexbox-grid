@@ -96,3 +96,23 @@ In this practice I've build a simple animated slider only with flexbox
 
 In this practice I've build a simple splited layout
 [link to practice](https://jsfiddle.net/rodrigoarreola/4Lp8nLbg/)
+
+Another links of interest:
+* [Best image placeholders](https://www.johanbostrom.se/blog/the-best-image-placeholder-services-on-the-web)
+* [Lorempixel](http://lorempixel.com/) this is great because you can select a topic for the image  
+  the usage is verys simple `http://lorempixel.com/{width}/{height}/{topic}/`
+* [Placeholder](https://placeholder.com/) the usage is like this `http://via.placeholder.com/{width}x{height}`
+
+## Practice 7
+
+In this practice I've build a product grid, the classes of this practice are set according the [BEM](https://css-tricks.com/bem-101/) methodology  
+
+[Why BEM?](https://blog.decaf.de/2015/06/24/why-bem-in-a-nutshell/)
+
+[BEM with Sass](https://assist-software.net/blog/css-guideline-tutorial-bem-sass)
+
+[BEM's official site](http://getbem.com/)  
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/f1jpf0uy/)
+
+

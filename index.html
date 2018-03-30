@@ -8,33 +8,27 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <article class="wrapper">
-        <section class="split">
-            <aside class="split-block">
-                <div class="image split-item">
-                    <img src="http://lorempixel.com/400/600/sports/" alt="">
-                </div>
-                <div class="flex-container split-item">
-                    <h3 class="title">Split layout con flexbox</h3>
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed quam autem officiis ipsum, consectetur numquam itaque ea excepturi amet.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eius odit culpa fuga optio harum nisi accusamus laudantium rem modi.</p>
-                    </div>
-                </div>
-            </aside>
-            <aside class="split-block">
-                    <div class="image split-item">
-                        <img src="http://lorempixel.com/400/600/sports/" alt="">
-                    </div>
-                    <div class="flex-container split-item">
-                        <h3 class="title">Split layout con flexbox</h3>
-                        <div class="text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sed quam autem officiis ipsum, consectetur numquam itaque ea excepturi amet.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eius odit culpa fuga optio harum nisi accusamus laudantium rem modi.</p>
-                        </div>
-                    </div>
-                </aside>
-        </section>
-    </article>
+    <div class="product-grid">
+        <article class="product offer">
+            <div class="product__tag">Offer</div>
+            <img src="http://lorempixel.com/400/600/technics/" alt="" class="product__img">
+            <footer class="product__footer">
+                <h3 class="product__title">Some item</h3>
+                <div class="product__price">600</div>
+                <a href="#" class="product__buy">Buy</a>
+            </footer>
+        </article>
+
+        <article class="product">
+            <div class="product__tag">Offer</div>
+            <img src="http://lorempixel.com/400/600/technics/" alt="" class="product__img">
+            <footer class="product__footer">
+                <h3 class="product__title">Some item</h3>
+                <div class="product__price">600</div>
+                <a href="#" class="product__buy">Buy</a>
+            </footer>
+        </article>
+        
+    </div>
 </body>
 </html>
