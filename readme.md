@@ -115,4 +115,10 @@ In this practice I've build a product grid, the classes of this practice are set
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/f1jpf0uy/)
 
+## Practice 8
+
+This little practice it's about total center in elements with flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/jbhgg5ox/)
+
 
