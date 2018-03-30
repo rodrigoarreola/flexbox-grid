@@ -10,72 +10,43 @@ html {
   margin: 0;
   box-sizing: inherit; }
 
-.page-title {
-  text-align: center;
-  line-height: 2;
+body {
+  background-color: steelblue; }
+
+img {
+  max-width: 100%;
+  height: 90%; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  color: white; }
+
+.flex-container {
+  padding: 2rem 10%;
   display: flex;
-  align-items: center;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto; }
-  .page-title::before, .page-title::after {
-    content: "";
-    flex: auto;
-    height: .1em;
-    display: block; }
-  .page-title::before {
-    margin-right: 0.5em;
-    background: linear-gradient(to right, steelblue, #00ff6a); }
-  .page-title::after {
-    margin-left: 0.5em;
-    background: linear-gradient(to left, steelblue, #00ff6a); }
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.4em; }
 
-.slider {
-  width: 50vw;
-  height: 80vh;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: hidden; }
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
 
-.slider__content {
-  display: flex;
-  width: calc(100% * 3);
-  animation: slider 10s linear infinite;
-  position: relative;
-  left: 0; }
+.image {
+  display: block;
+  margin: auto;
+  text-align: center; }
 
-.slider__item {
-  position: relative;
-  width: 100%; }
+@media screen and (min-width: 64em) {
+  .split-block {
+    display: flex; }
 
-.slider__img {
-  width: 100%;
-  object-fit: cover;
-  display: block; }
+  .split-block:first-child {
+    flex-direction: row-reverse; }
 
-.slider__caption {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 1em;
-  position: absolute;
-  bottom: -5em;
-  left: 1em;
-  animation: caption calc(10s / 3) linear infinite; }
-
-@keyframes slider {
-  0%, 30% {
-    left: 0%; }
-  33%, 63% {
-    left: -100%; }
-  66%, 97% {
-    left: -200%; } }
-@keyframes caption {
-  0%, 15% {
-    opacity: 0; }
-  20%, 90% {
-    bottom: 1em;
-    opacity: 1; }
-  91%, 100% {
-    opacity: 0; } }
+  .split-item {
+    flex: 1 1 50%; } }
 
 /*# sourceMappingURL=style.css.map */
