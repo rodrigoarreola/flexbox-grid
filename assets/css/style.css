@@ -14,23 +14,56 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-.grid-container {
+.banner {
+  background: linear-gradient(150deg, #8C0000, #07243a);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+  .banner__content {
+    padding: 2em 1em;
+    text-align: center;
+    color: white; }
+  .banner__presentation {
+    margin-bottom: 1em; }
+  .banner__title {
+    font-size: 3.5em; }
+  .banner__subtitle {
+    opacity: .7; }
+  .banner__img {
+    display: none; }
+
+.button {
+  background: linear-gradient(110deg, #115b94, #0f4a77);
+  color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  margin-bottom: 1em;
+  padding: 1em;
+  justify-content: space-between;
+  text-decoration: none;
+  border-radius: 2em 0 2em 0; }
+  .button:hover {
+    text-decoration: none;
+    background: linear-gradient(110deg, #2588d3, #0b3453); }
+  .button:nth-child(3) {
+    background: linear-gradient(360deg, #8C0000, #daadad);
+    margin: 0 auto;
+    justify-content: center;
+    width: 60%; }
+    .button:nth-child(3):hover {
+      background: linear-gradient(360deg, #6b0101, #bd9696); }
 
-.grid-item {
-  width: 100%;
-  margin-bottom: 10px;
-  background: plum; }
-  .grid-item:nth-child(even) {
-    background: pink; }
-
-@media screen and (min-width: 480px) {
-  .grid-item {
-    width: calc(50% - 5px); } }
 @media screen and (min-width: 720px) {
-  .grid-item {
-    width: calc(33.3% - 6.6px); } }
+  .banner__content {
+    display: flex;
+    text-align: left; }
+  .banner__first {
+    width: 60%;
+    padding: 4em 1em; }
+  .banner__second {
+    width: 40%; }
+  .banner__img {
+    display: block;
+    align-items: center; }
+
+  .button {
+    padding: 1em 4em; } }
 
 /*# sourceMappingURL=style.css.map */
