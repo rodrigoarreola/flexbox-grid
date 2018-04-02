@@ -169,7 +169,11 @@ Example of nav using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/m7dcq4pt/)
 
+## Practice 17
 
+Calendar made with flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/dwyk0bwp/)
 
 
 

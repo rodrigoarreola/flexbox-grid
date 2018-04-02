@@ -14,51 +14,48 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-.header {
-  padding: 1rem;
-  text-transform: uppercase;
-  background-color: #81e0ca;
-  color: white;
+body {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-  .header__img {
-    display: block;
-    max-width: 200px; }
-  .header__items {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; }
-  .header__item {
-    padding: .5rem 0;
-    text-align: center;
-    border-bottom: 1px solid white; }
-  .header__tools {
-    display: flex;
-    justify-content: space-between;
-    width: 7rem;
-    padding-top: .5em; }
-  .header__tool {
-    background-color: #00c094;
-    font-size: 2rem;
-    padding: .5rem;
-    border-radius: 50%; }
+  background: linear-gradient(-45deg, #ff0080, #ff8000); }
 
-@media screen and (min-width: 600px) {
-  .header {
-    flex-direction: row; }
-    .header__nav {
-      flex-basis: 75%; }
-    .header__items {
-      flex-direction: row;
-      justify-content: space-between; }
-    .header__item {
-      border-bottom: 0; }
-    .header__img {
-      max-width: 150px; }
-    .header__tools {
-      flex-basis: 7%; } }
+.calendar {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+  /*In case that the first day of a month doesn't start in Sunday 
+  just replace the number for the number-1 of the day when the month starts
+  */ }
+  .calendar__header {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .calendar__month {
+    text-align: center;
+    line-height: 1;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between; }
+    .calendar__month::after, .calendar__month::before {
+      width: calc(100% / 7);
+      text-align: center; }
+    .calendar__month::after {
+      content: ">"; }
+    .calendar__month::before {
+      content: "<"; }
+  .calendar__week {
+    display: flex; }
+  .calendar__day {
+    color: white; }
+  .calendar__item {
+    width: calc(calc(100% / 7) - 4px*2);
+    text-align: center;
+    margin: 4px;
+    line-height: 2; }
+  .calendar__dates {
+    display: flex;
+    flex-wrap: wrap; }
+  .calendar__date {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

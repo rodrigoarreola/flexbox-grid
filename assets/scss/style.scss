@@ -1,85 +1,74 @@
 @import "reset";
 
-.header{
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: #81e0ca;
-    color: white; 
+$calendar-item-margin: 4px;
+$calendar-item-width: calc(100% / 7);
+//NOTE: Hey moron, remember that the variables inside a calc function must be interpolated ¯\_(ツ)_/¯
+$calendar-item-inner-width: calc(#{$calendar-item-width} - #{$calendar-item-margin}*2);
 
+body{
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    background: linear-gradient(-45deg, hsl(330, 100%, 50%), hsl(30, 100%, 50%));
+}
+.calendar{
+    width: 90%;
+    margin: auto;
+    max-width: 500px;
 
-    &__logo{
-        
+    &__header{
+        background-color: rgba(0,0,0,0.3);
     }
 
-    &__img{
-        display: block;
-        max-width: 200px;
-    }
+    &__month{
+        text-align: center;
+        line-height: 1;
+        color: white;
+        font-size: 2em;
 
-    &__nav{
-
-    }
-
-    &__items{
-        list-style: none;
-        display: flex;        
+        display: flex;
         justify-content: space-between;
-        flex-direction: column;
 
+        &::after, &::before{
+            width: $calendar-item-width;
+            text-align: center;
+        }
+        &::after{
+            content: ">"
+        }
+        &::before{
+            content: "<"
+        }
+    }
+
+    &__week{
+        display: flex;
+    }
+
+    &__day{
+        color: white;
     }
 
     &__item{
-        padding: .5rem 0;
+        width: $calendar-item-inner-width;
         text-align: center;
-        border-bottom: 1px solid white;
+        margin: $calendar-item-margin;
+        line-height: 2;
     }
 
-    &__tools{
+    &__dates{
         display: flex;
-        justify-content: space-between;
-        width: 7rem;
-        padding-top: .5em;
+        flex-wrap: wrap;
     }
 
-    &__tool{
-        background-color: #00c094;
-        font-size: 2rem;
-        padding: .5rem;
-        border-radius: 50%;
+    &__date{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
     }
-}
 
-.main{
-
-}
-
-@media screen and (min-width: 600px){
-    .header{
-        flex-direction: row;    
-
-        &__nav{
-            flex-basis: 75%;
-
-        }
-        
-        &__items{
-            flex-direction: row;
-            justify-content: space-between; 
-        }
-
-        &__item{
-            border-bottom: 0;
-        }
-        &__img{
-            max-width: 150px;
-        }
-
-        &__tools{
-            flex-basis: 7%;
-        }
+    /*In case that the first day of a month doesn't start in Sunday 
+    just replace the number for the number-1 of the day when the month starts
+    */
+    &__date:first-of-type{
+        // margin-left: calc(#{$calendar-item-width} * 1 + #{$calendar-item-margin});
     }
 }
