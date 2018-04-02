@@ -157,6 +157,16 @@ A simple practice of how to make same height column containers
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/tpy60g9s)
 
+## Practice 15
+
+A simple pricing table excersice using flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/r7u9mLzr)
+
+
+
+
+
 
 
 
