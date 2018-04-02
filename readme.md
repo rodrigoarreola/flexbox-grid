@@ -163,6 +163,14 @@ A simple pricing table excersice using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/r7u9mLzr)
 
+## Practice 16
+
+Example of nav using flexbox
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/m7dcq4pt/)
+
+
+
 
 
 
