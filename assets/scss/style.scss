@@ -1,81 +1,30 @@
 @import "reset";
 
-.banner{
-    background: linear-gradient(150deg, #8C0000, #07243a);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
-    &__content{
-        padding: 2em 1em;
-        text-align: center;
-        color: white;
-    }
-
-    &__presentation{
-        margin-bottom: 1em; 
-    }
-    &__title{
-        font-size: 3.5em;
-    }
-
-    &__subtitle{
-        opacity: .7;
-    }
-
-    &__img{
-        display: none;
-    }
-
+.title{
+    text-align: center;
+    margin: 1 rem auto;
 }
 
-.button{
-    background:linear-gradient(110deg, #115b94, #0f4a77);
-    color: white;
+.row{
     display: flex;
-    margin-bottom: 1em;
-    padding: 1em;
     justify-content: space-between;
-    text-decoration: none;
-    border-radius: 2em 0 2em 0;
-
-    &:hover{
-        text-decoration: none;
-        background:linear-gradient(110deg, #2588d3, #0b3453);
-    }
-
-    &:nth-child(3){
-        background:linear-gradient(360deg, #8C0000, #daadad);
-        margin: 0 auto;
-        justify-content: center;
-        width: 60%;
-        &:hover{
-            background:linear-gradient(360deg, #6b0101, #bd9696);
-        }
-    }
+    // align-items: stretch;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: steelblue;
 }
 
-@media screen and (min-width:720px){
-    .banner{
-        &__content{
-            display: flex;
-            text-align: left;
-        }
+.col{
+    background-color: deepskyblue;
+    padding: 1rem;
+    flex-basis: 47.5%;
+    display: flex;
+    flex-direction: column;
+}
 
-        &__first{
-            width: 60%;
-            padding: 4em 1em;
-        }
-        &__second{
-            width: 40%;
-        }
-        &__img{
-            display: block;
-            align-items: center;
-        }
-        // &__img{
-        //     background: url(http://pluspng.com/img-png/logo-fifa-world-cup-2018-png-ih0-redbubble-net-image-144004343-2754-sticker-375x360-u4-png-375.png) center contain no-repeat;
-        // }
-    }
-
-    .button{
-        padding: 1em 4em;
-    }
+.text{
+    background-color: white;
+    padding: 1rem;
+    flex-grow: 1;
 }
