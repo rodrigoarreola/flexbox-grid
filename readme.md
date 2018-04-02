@@ -139,6 +139,24 @@ Example of how hard it is to make a grid with only flexbox, (this makes nothing 
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/zc8fatff/)
 
+## Practice 12
+
+This is a modification of the previous fixed header and footer, the diferrence is that in this fiddle the flex-basis property is used to archive the sticky footer 
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/x78csk7f/)
+
+## Practice 13
+
+Example of an static World Cup Russia 2018 Banner with flexbox
+
+[Link to practice](https://jsfiddle.net/rodrigoarreola/xdj2uv7s/)
+
+## Practice 14
+
+A simple practice of how to make same height column containers
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/tpy60g9s)
+
 
 
 
