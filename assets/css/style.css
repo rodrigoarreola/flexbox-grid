@@ -14,48 +14,35 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-body {
+.app {
+  color: #fff;
   min-height: 100vh;
-  display: flex;
-  background: linear-gradient(-45deg, #ff0080, #ff8000); }
+  line-height: 1.4em;
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: 'header' 'main' 'aside' 'footer'; }
+  .app__header {
+    background-color: #375a7f;
+    grid-area: header; }
+  .app__aside {
+    background-color: #6a99cb;
+    grid-area: aside; }
+  .app__main {
+    background-color: #f7f7f7;
+    color: #000;
+    grid-area: main; }
+  .app__footer {
+    background-color: #fcfa70;
+    color: #000;
+    grid-area: footer; }
 
-.calendar {
-  width: 90%;
-  margin: auto;
-  max-width: 500px;
-  /*In case that the first day of a month doesn't start in Sunday 
-  just replace the number for the number-1 of the day when the month starts
-  */ }
-  .calendar__header {
-    background-color: rgba(0, 0, 0, 0.3); }
-  .calendar__month {
-    text-align: center;
-    line-height: 1;
-    color: white;
-    font-size: 2em;
-    display: flex;
-    justify-content: space-between; }
-    .calendar__month::after, .calendar__month::before {
-      width: calc(100% / 7);
-      text-align: center; }
-    .calendar__month::after {
-      content: ">"; }
-    .calendar__month::before {
-      content: "<"; }
-  .calendar__week {
-    display: flex; }
-  .calendar__day {
-    color: white; }
-  .calendar__item {
-    width: calc(calc(100% / 7) - 4px*2);
-    text-align: center;
-    margin: 4px;
-    line-height: 2; }
-  .calendar__dates {
-    display: flex;
-    flex-wrap: wrap; }
-  .calendar__date {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff; }
+@media screen and (min-width: 768px) {
+  .app {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'header header header' 'aside main main' 'footer footer footer'; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,74 +1,72 @@
 @import "reset";
 
-$calendar-item-margin: 4px;
-$calendar-item-width: calc(100% / 7);
-//NOTE: Hey moron, remember that the variables inside a calc function must be interpolated ¯\_(ツ)_/¯
-$calendar-item-inner-width: calc(#{$calendar-item-width} - #{$calendar-item-margin}*2);
+//Colors
+$strongBlue: #375a7f;
+$blue: #4d7cae;
+$lightBlue: #6a99cb;
+$yellow: #fcfa70;
+$white: #fff;
+$base: #f7f7f7;
+$black: #000;
 
-body{
+.app{
+    color: $white;
     min-height: 100vh;
-    display: flex;
-    background: linear-gradient(-45deg, hsl(330, 100%, 50%), hsl(30, 100%, 50%));
-}
-.calendar{
-    width: 90%;
-    margin: auto;
-    max-width: 500px;
+    line-height: 1.4em;
+    background-color: $base;
+    // padding: 1em;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    //If you don't put the names between a '' mark the grid will be in the same row
+    grid-template-areas: 'header' 'main' 'aside' 'footer';
 
     &__header{
-        background-color: rgba(0,0,0,0.3);
+        background-color: $strongBlue;
+        grid-area: header;
+        
     }
 
-    &__month{
-        text-align: center;
-        line-height: 1;
-        color: white;
-        font-size: 2em;
-
-        display: flex;
-        justify-content: space-between;
-
-        &::after, &::before{
-            width: $calendar-item-width;
-            text-align: center;
-        }
-        &::after{
-            content: ">"
-        }
-        &::before{
-            content: "<"
-        }
+    &__aside{
+        background-color: $lightBlue;
+        grid-area: aside;
     }
 
-    &__week{
-        display: flex;
-    }
+    &__items{
 
-    &__day{
-        color: white;
     }
 
     &__item{
-        width: $calendar-item-inner-width;
-        text-align: center;
-        margin: $calendar-item-margin;
-        line-height: 2;
+
     }
 
-    &__dates{
-        display: flex;
-        flex-wrap: wrap;
+    &__main{
+        background-color: $base;
+        color: $black;
+        grid-area: main;
     }
 
-    &__date{
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
+    &__title{
+
     }
 
-    /*In case that the first day of a month doesn't start in Sunday 
-    just replace the number for the number-1 of the day when the month starts
-    */
-    &__date:first-of-type{
-        // margin-left: calc(#{$calendar-item-width} * 1 + #{$calendar-item-margin});
+    &__text{
+
+    }
+
+    &__footer{
+        background-color: $yellow;
+        color: $black;
+        grid-area: footer;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .app{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 'header header header' 'aside main main' 'footer footer footer';
     }
 }

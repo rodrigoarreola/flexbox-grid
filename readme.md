@@ -1,10 +1,16 @@
-# Index
+# Flexbox - CSS Grid
 
-## Practice 1
+This is a simple collection of examples both flexbox and css grid, I used a base `index.html`
+and a `style.scss` files to do all the examples to avoid have a large amount of files.  
+Each example has their own link at [jsfiddle](https://jsfiddle.net/user/rodrigoarreola/fiddles/) 
+
+## Flexbox 
+
+### Practice 1
 
 [link to practice](https://codepen.io/rodrigoarreola/pen/bvLWBZ) 
 
-### Content
+#### Content
 1. Flex container
 2. Flex item
 3. Flex lines
@@ -18,13 +24,13 @@
 `flex-direction: row-reverse;`  each line it's independient 
  I mean, in the example this proves that, beacuse each line aplies the `row-reverse`
 
- ## Practice 2
+ ### Practice 2
 
  [link to practice](www.google.com)
 
- ### Cheat sheet
+ #### Cheat sheet
 
-#### Propiedades de los elementos padres
+##### Propiedades de los elementos padres
 
 1. `display: flex | inline-flex;`  
     Define una caja flexible de bloque o de línea
@@ -46,16 +52,16 @@
 6. `align-content: stretch | flex-start | flex-end | center | space-between | space-around;`  
     Alineación de los hijos en el eje transversal (espacio sobrante) cuando SI HAY saltos de línea `(flex-wrap: wrap | wrap-reverse;)`
 
-## Practice 3
+### Practice 3
 
 Example of how to use `flex-direction` and `order` in order to build a simple template  
 with a `main` tag and an `aside` tag
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/ypuqd5wr/)
 
-### Cheat sheet
+#### Cheat sheet
 
-#### Propiedades de los elementos hijos
+##### Propiedades de los elementos hijos
 
 1. `order: $num;`  
     Esta propiedad puede cambiar el orden de los elementos  
@@ -80,19 +86,19 @@ with a `main` tag and an `aside` tag
     de su contenedor esta propiedad sobreescribe la alineación  
     por defecto establecida en `align-items` por el contenedor
 
-## Practice 4
+### Practice 4
 
 In this practice I've build a holy grail layout with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/L7mp1j1h/)
     
-## Practice 5
+### Practice 5
 
 In this practice I've build a simple animated slider only with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/wvmph1LL/)
 
-## Practice 6
+### Practice 6
 
 In this practice I've build a simple splited layout
 [link to practice](https://jsfiddle.net/rodrigoarreola/4Lp8nLbg/)
@@ -103,7 +109,7 @@ Another links of interest:
   the usage is verys simple `http://lorempixel.com/{width}/{height}/{topic}/`
 * [Placeholder](https://placeholder.com/) the usage is like this `http://via.placeholder.com/{width}x{height}`
 
-## Practice 7
+### Practice 7
 
 In this practice I've build a product grid, the classes of this practice are set according the [BEM](https://css-tricks.com/bem-101/) methodology  
 
@@ -115,65 +121,77 @@ In this practice I've build a product grid, the classes of this practice are set
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/f1jpf0uy/)
 
-## Practice 8
+### Practice 8
 
 This little practice it's about total center in elements with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/jbhgg5ox/)
 
-## Practice 9
+### Practice 9
 
 Build of a blog layout, the classes were set according the BEM methodology
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/yve0qpuq/)
 
-## Practice 10
+### Practice 10
 
 Simple example of fixed header and footer using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/ypyok7xu/)
 
-## Practice 11
+### Practice 11
 
 Example of how hard it is to make a grid with only flexbox, (this makes nothing at all)
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/zc8fatff/)
 
-## Practice 12
+### Practice 12
 
 This is a modification of the previous fixed header and footer, the diferrence is that in this fiddle the flex-basis property is used to archive the sticky footer 
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/x78csk7f/)
 
-## Practice 13
+### Practice 13
 
 Example of an static World Cup Russia 2018 Banner with flexbox
 
 [Link to practice](https://jsfiddle.net/rodrigoarreola/xdj2uv7s/)
 
-## Practice 14
+### Practice 14
 
 A simple practice of how to make same height column containers
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/tpy60g9s)
 
-## Practice 15
+### Practice 15
 
 A simple pricing table excersice using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/r7u9mLzr)
 
-## Practice 16
+### Practice 16
 
 Example of nav using flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/m7dcq4pt/)
 
-## Practice 17
+### Practice 17
 
 Calendar made with flexbox
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/dwyk0bwp/)
+
+## CSS Grid
+
+### Helpful links of my interest 
+
+[15 Reasons Why A Grid Based Approach Will Improve Your Designs](https://www.canva.com/learn/grid-design/)
+
+[The Grid System: Building a Solid Design Layout](https://www.interaction-design.org/literature/article/the-grid-system-building-a-solid-design-layout)
+
+[CSS References](https://cssreference.io/)
+
+
 
 
 
