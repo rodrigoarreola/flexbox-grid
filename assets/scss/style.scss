@@ -14,23 +14,41 @@ $black: #000;
     min-height: 100vh;
     line-height: 1.4em;
     background-color: $base;
-    // padding: 1em;
 
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
     //If you don't put the names between a '' mark the grid will be in the same row
-    grid-template-areas: 'header' 'main' 'aside' 'footer';
+    //Template area is used to define specific areas
+    grid-template-areas: 'header' 'navigation' 'main' 'aside' 'footer';
 
     &__header{
         background-color: $strongBlue;
-        grid-area: header;
-        
+        //grid-area specify the area of the element, this is according the areas defined before
+        grid-area: header;        
     }
 
     &__aside{
         background-color: $lightBlue;
         grid-area: aside;
+    }
+
+    &__nav{
+        background-color: $yellow;
+        grid-area: navigation;
+    }
+
+    
+    &__main{
+        background-color: $base;
+        color: $black;
+        grid-area: main;
+    }
+
+    &__footer{
+        background-color: $yellow;
+        color: $black;
+        grid-area: footer;
     }
 
     &__items{
@@ -41,11 +59,6 @@ $black: #000;
 
     }
 
-    &__main{
-        background-color: $base;
-        color: $black;
-        grid-area: main;
-    }
 
     &__title{
 
@@ -54,19 +67,20 @@ $black: #000;
     &__text{
 
     }
-
-    &__footer{
-        background-color: $yellow;
-        color: $black;
-        grid-area: footer;
-    }
 }
 
-@media screen and (min-width: 768px){
+.app > * {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 64em){
     .app{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'header header header' 'aside main main' 'footer footer footer';
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header header header' 
+                            'navigation main aside' 
+                            '. main .' 
+                            'footer footer footer';
     }
 }

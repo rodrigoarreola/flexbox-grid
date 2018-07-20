@@ -22,13 +22,16 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: 'header' 'main' 'aside' 'footer'; }
+  grid-template-areas: 'header' 'navigation' 'main' 'aside' 'footer'; }
   .app__header {
     background-color: #375a7f;
     grid-area: header; }
   .app__aside {
     background-color: #6a99cb;
     grid-area: aside; }
+  .app__nav {
+    background-color: #fcfa70;
+    grid-area: navigation; }
   .app__main {
     background-color: #f7f7f7;
     color: #000;
@@ -38,11 +41,14 @@ body {
     color: #000;
     grid-area: footer; }
 
-@media screen and (min-width: 768px) {
+.app > * {
+  padding: 1rem; }
+
+@media screen and (min-width: 64em) {
   .app {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 'header header header' 'aside main main' 'footer footer footer'; } }
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 'header header header'  'navigation main aside'  '. main .'  'footer footer footer'; } }
 
 /*# sourceMappingURL=style.css.map */
