@@ -209,6 +209,13 @@ Dice made with CSS Grid using grid-area but mapping the dots (way more clean)
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/j1c25quf/)
 
+### Practice 20
+
+Navigation off canvas with CSS Grid like a hamburger menu
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/mhwzad7n/)
+
+
 
 
 

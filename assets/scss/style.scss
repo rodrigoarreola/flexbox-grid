@@ -1,66 +1,129 @@
 @import "reset";
 
 //Colors
-$strongBlue: #375a7f;
-$blue: #4d7cae;
-$lightBlue: #6a99cb;
-$yellow: #fcfa70;
-$white: #fff;
+$red: #ef3e36;
+$blue: #00aeef;
+$green: #17bebb;
+$white: #fffbff;
+$black: #2e282a;
 $base: #f7f7f7;
-$black: #000;
+$dark: #000;
 
-.point{
-    width: 20px;
-    height: 20px;
-    background-color: $black;
-    border-radius: 50%;
-    align-self: center;
-    justify-self: center;
-}
+.app{
+    color: $white;
+    min-height: 100vh;
+    line-height: 1.4em;
+    background-color: $base;
 
-.dice{
-    width: 120px;
-    height: 120px;
-    border: 1px solid $strongBlue;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    //If you don't put the names between a '' mark the grid will be in the same row
+    //Template area is used to define specific areas
+    grid-template-areas: 'header' 'navigation' 'main' 'aside' 'footer';
+
+    &__header{
+        background-color: $green;
+        //grid-area specify the area of the element, this is according the areas defined before
+        grid-area: header;        
+    }
+
+    &__aside{
+        background-color: $red;
+        grid-area: aside;
+    }
+
+    &__nav{
+        background-color: $red;
+        grid-area: navigation;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        transition: transform .3s ease-in-out;
+        transform: translateX(-100%); //left
+        //transform: translateX(100%); //right
+        //transform: translateY(-100%); //up
+        //transform: translateY(100%); //down
+    }
+    &__nav:target{
+        transform: translate(0); //left and right
+        //transform: translate(0, 0); //up and down
+    }
+
+    
+    &__main{
+        background-color: $base;
+        color: $black;
+        grid-area: main;
+    }
+
+    &__footer{
+        background-color: $green;
+        color: $white;
+        grid-area: footer;
+    }
+
+    &__items{
+
+    }
+
+    &__item{
+
+    }
+
+
+    &__title{
+
+    }
+
+    &__text{
+
+    }
 }
 
-//Mapping the points
-
-.p1{
-    grid-area: 1 / 1;
+.app > * {
+    padding: 1rem;
 }
 
-.p2{
-    grid-area: 1 / 2;
+.close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-stretch: wider;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: $black;
+    background-color: $white;
 }
 
-.p3{
-    grid-area: 1 / 3;
-}
+@media screen and (min-width: 64em){
+    .app{ 
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header header header' 
+                            'navigation navigation navigation' 
+                            'main main aside' 
+                            'footer footer footer';
+        &__nav{
+            position: static;
+            transform: translate(0,0); 
+            background-color: rgba($green, 0.5);
+            li{
+                display: inline;
+                padding: 1rem;
+            }
+        }
+    }
 
-.p4{
-    grid-area: 2 / 1;
-}
 
-.p5{
-    grid-area: 2 / 2;
-}
-
-.p6{
-    grid-area: 2 / 3;
-}
-
-.p7{
-    grid-area: 3 / 1;
-}
-
-.p8{
-    grid-area: 3 / 2;
-}
-
-.p9{
-    grid-area: 3 / 3;
+    .toggle{
+        display: none;
+    }
 }
