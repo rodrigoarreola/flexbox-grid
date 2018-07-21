@@ -1,129 +1,64 @@
 @import "reset";
 
 //Colors
-$red: #ef3e36;
-$blue: #00aeef;
-$green: #17bebb;
-$white: #fffbff;
-$black: #2e282a;
-$base: #f7f7f7;
-$dark: #000;
+$pink: hsl(330, 100%, 50%);
+$orange: hsl(30, 100%, 50%);
+$black: rgba(0,0,0,0.3);
+$grey: rgba(255, 255, 255, 0.2);
+$white: #fff;
 
-.app{
-    color: $white;
+body{
     min-height: 100vh;
-    line-height: 1.4em;
-    background-color: $base;
-
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, auto);
-    //If you don't put the names between a '' mark the grid will be in the same row
-    //Template area is used to define specific areas
-    grid-template-areas: 'header' 'navigation' 'main' 'aside' 'footer';
+    display: flex;
+    background: linear-gradient(-45deg, $pink, $orange);
+}
+.calendar{
+    width: 90%;
+    margin: auto;
+    max-width: 500px;
+    color: $white;
 
     &__header{
-        background-color: $green;
-        //grid-area specify the area of the element, this is according the areas defined before
-        grid-area: header;        
+        background-color: rgba(0,0,0,0.3);
     }
 
-    &__aside{
-        background-color: $red;
-        grid-area: aside;
+    &__week, &__dates{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 4px;
     }
 
-    &__nav{
-        background-color: $red;
-        grid-area: navigation;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        transition: transform .3s ease-in-out;
-        transform: translateX(-100%); //left
-        //transform: translateX(100%); //right
-        //transform: translateY(-100%); //up
-        //transform: translateY(100%); //down
-    }
-    &__nav:target{
-        transform: translate(0); //left and right
-        //transform: translate(0, 0); //up and down
-    }
+    &__month{
+        text-align: center;
+        line-height: 1;
+        font-size: 2em;
 
-    
-    &__main{
-        background-color: $base;
-        color: $black;
-        grid-area: main;
-    }
-
-    &__footer{
-        background-color: $green;
-        color: $white;
-        grid-area: footer;
-    }
-
-    &__items{
-
-    }
-
-    &__item{
-
-    }
-
-
-    &__title{
-
-    }
-
-    &__text{
-
-    }
-}
-
-.app > * {
-    padding: 1rem;
-}
-
-.close{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    font-stretch: wider;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 50%;
-    color: $black;
-    background-color: $white;
-}
-
-@media screen and (min-width: 64em){
-    .app{ 
-        grid-template-columns: 1fr 4fr 1fr;
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 'header header header' 
-                            'navigation navigation navigation' 
-                            'main main aside' 
-                            'footer footer footer';
-        &__nav{
-            position: static;
-            transform: translate(0,0); 
-            background-color: rgba($green, 0.5);
-            li{
-                display: inline;
-                padding: 1rem;
-            }
+        &::after, &::before{
+            text-align: center;
+        }
+        &::after{
+            content: ">"
+        }
+        &::before{
+            content: "<"
         }
     }
 
+    &__week{        
+        background-color: $black;
+    }
+    &__item{
+        line-height: 2;
+        text-align: center;
+    }
+    &__date{
+        background-color: $grey;
+    }
 
-    .toggle{
-        display: none;
+    /*In case that the first day of a month doesn't start in Sunday 
+    just replace the number for the number of the day when the month starts
+    */
+    &__date:first-child{
+        grid-column: 4;
     }
 }

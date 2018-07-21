@@ -215,7 +215,11 @@ Navigation off canvas with CSS Grid like a hamburger menu
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/mhwzad7n/)
 
+### Practice 21
 
+Calendar made with CSS Grid
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/ptkshdq6/)
 
 
 

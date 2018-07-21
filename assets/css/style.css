@@ -14,74 +14,43 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif; }
 
-.app {
-  color: #fffbff;
+body {
   min-height: 100vh;
-  line-height: 1.4em;
-  background-color: #f7f7f7;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: 'header' 'navigation' 'main' 'aside' 'footer'; }
-  .app__header {
-    background-color: #17bebb;
-    grid-area: header; }
-  .app__aside {
-    background-color: #ef3e36;
-    grid-area: aside; }
-  .app__nav {
-    background-color: #ef3e36;
-    grid-area: navigation;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    transition: transform .3s ease-in-out;
-    transform: translateX(-100%); }
-  .app__nav:target {
-    transform: translate(0); }
-  .app__main {
-    background-color: #f7f7f7;
-    color: #2e282a;
-    grid-area: main; }
-  .app__footer {
-    background-color: #17bebb;
-    color: #fffbff;
-    grid-area: footer; }
-
-.app > * {
-  padding: 1rem; }
-
-.close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  font-stretch: wider;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 50%;
-  color: #2e282a;
-  background-color: #fffbff; }
+  background: linear-gradient(-45deg, #ff0080, #ff8000); }
 
-@media screen and (min-width: 64em) {
-  .app {
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 'header header header'  'navigation navigation navigation'  'main main aside'  'footer footer footer'; }
-    .app__nav {
-      position: static;
-      transform: translate(0, 0);
-      background-color: rgba(23, 190, 187, 0.5); }
-      .app__nav li {
-        display: inline;
-        padding: 1rem; }
-
-  .toggle {
-    display: none; } }
+.calendar {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+  color: #fff;
+  /*In case that the first day of a month doesn't start in Sunday 
+  just replace the number for the number of the day when the month starts
+  */ }
+  .calendar__header {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .calendar__week, .calendar__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 4px; }
+  .calendar__month {
+    text-align: center;
+    line-height: 1;
+    font-size: 2em; }
+    .calendar__month::after, .calendar__month::before {
+      text-align: center; }
+    .calendar__month::after {
+      content: ">"; }
+    .calendar__month::before {
+      content: "<"; }
+  .calendar__week {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .calendar__item {
+    line-height: 2;
+    text-align: center; }
+  .calendar__date {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .calendar__date:first-child {
+    grid-column: 4; }
 
 /*# sourceMappingURL=style.css.map */
