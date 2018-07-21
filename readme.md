@@ -191,6 +191,24 @@ Calendar made with flexbox
 
 [CSS References](https://cssreference.io/)
 
+### Practice 18
+
+Holy grail layout made with CSS Grid
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/stmLz6hn/)
+
+### Practice 19
+
+Dice made with CSS Grid using grid-area
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/p9nx065w/)
+
+### Practice 19.1
+
+Dice made with CSS Grid using grid-area but mapping the dots (way more clean)
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/j1c25quf/)
+
 
 
 
