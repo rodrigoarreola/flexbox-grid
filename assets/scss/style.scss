@@ -1,64 +1,153 @@
 @import "reset";
 
+/*
+grid-template-columns: define the number of columns in the grid
+grid-template-rows: define the number of rows in the grid
+grid-template-area: name the areas of the grid
+*/
+
 //Colors
-$pink: hsl(330, 100%, 50%);
-$orange: hsl(30, 100%, 50%);
-$black: rgba(0,0,0,0.3);
-$grey: rgba(255, 255, 255, 0.2);
-$white: #fff;
+$red: #ef3e36;
+$blue: #00aeef;
+$green: #17bebb;
+$white: #fffbff;
+$black: #2e282a;
+$base: #f7f7f7;
+$dark: #000;
 
-body{
-    min-height: 100vh;
-    display: flex;
-    background: linear-gradient(-45deg, $pink, $orange);
-}
-.calendar{
-    width: 90%;
+.history{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(13, minmax(1rem, 4rem));
+    grid-auto-flow: row dense;
+    grid-gap: 1vw;
+    max-width: 1200px;
     margin: auto;
-    max-width: 500px;
-    color: $white;
 
-    &__header{
-        background-color: rgba(0,0,0,0.3);
-    }
-
-    &__week, &__dates{
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-gap: 4px;
-    }
-
-    &__month{
-        text-align: center;
-        line-height: 1;
-        font-size: 2em;
-
-        &::after, &::before{
-            text-align: center;
-        }
-        &::after{
-            content: ">"
-        }
-        &::before{
-            content: "<"
-        }
-    }
-
-    &__week{        
-        background-color: $black;
-    }
     &__item{
-        line-height: 2;
-        text-align: center;
-    }
-    &__date{
-        background-color: $grey;
+        background-color: $blue;
+        border: medium solid $black;
+        color: $white;
+        padding: 2rem;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /*
+        
+        => This is useless
+
+        &:nth-of-type(1){
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+        &:nth-of-type(2){
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        &:nth-of-type(3){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(4){
+            grid-row: span 1;
+            grid-column: span 3;
+        }
+        &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7){
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+        &:nth-of-type(8){
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        &:nth-of-type(9){
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+        &:nth-of-type(10){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(11){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(12){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(13), &:nth-last-of-type(14), &:nth-last-of-type(15){
+            grid-row: span 1;
+            grid-column: span 3;
+        }
+        &:nth-of-type(16){
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+        &:nth-of-type(17){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(18){
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+        &:nth-of-type(19){
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        &:nth-of-type(20){
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+        &:nth-of-type(21){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-of-type(22){
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        &:nth-of-type(23){
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+        */
     }
 
-    /*In case that the first day of a month doesn't start in Sunday 
-    just replace the number for the number of the day when the month starts
-    */
-    &__date:first-child{
-        grid-column: 4;
-    }
+            /*
+        DRY - Row x Columns
+        1x1
+        1x2
+        1x3
+        2x1
+        2x2
+        */
+
+        .r1c1{
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+
+        .r1c2{
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        .r1c3{
+            grid-row: span 1;
+            grid-column: span 3;
+        }
+
+        .r2c1{
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        .r2c2{
+            grid-row: span 2;
+            grid-column: span 2;
+        }
 }

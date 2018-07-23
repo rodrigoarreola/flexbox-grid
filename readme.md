@@ -221,6 +221,13 @@ Calendar made with CSS Grid
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/ptkshdq6/)
 
+### Practice 22
+
+Grid Placement, basically this practice is about the DRY principle
+and how a framework works
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/fezy1bLt/)
+
 
 
 
