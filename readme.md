@@ -228,6 +228,13 @@ and how a framework works
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/fezy1bLt/)
 
+### Practice 23
+
+Just a simple practice about the behavior of grid-columns and grid-rows
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/184uLt59/)
+
+
 
 
 

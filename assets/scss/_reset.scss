@@ -21,3 +21,9 @@ body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
 }
+
+@mixin total_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

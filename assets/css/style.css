@@ -14,131 +14,30 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold; }
 
-/*
-grid-template-columns: define the number of columns in the grid
-grid-template-rows: define the number of rows in the grid
-grid-template-area: name the areas of the grid
-*/
-.history {
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(13, minmax(1rem, 4rem));
+  grid-template-columns: repeat(6, 70px);
+  grid-auto-columns: 70px;
+  grid-auto-rows: 70px;
+  grid-gap: 5px;
   grid-auto-flow: row dense;
-  grid-gap: 1vw;
-  max-width: 1200px;
-  margin: auto;
-    /*
-DRY - Row x Columns
-1x1
-1x2
-1x3
-2x1
-2x2
-*/ }
-  .history__item {
-    background-color: #00aeef;
-    border: medium solid #2e282a;
-    color: #fffbff;
-    padding: 2rem;
-    font-size: 2em;
+  /*
+  => This might be a must!
+  grid-auto-rows: 50px; //define the size of any new element generated
+  grid-auto-columns: 50px; //define the size of any new element generated 
+  >> You never know when a new element might be added to the grid
+  */ }
+  .grid__item {
     display: flex;
     align-items: center;
     justify-content: center;
-        /*
-        
-        => This is useless
-
-        &:nth-of-type(1){
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-        &:nth-of-type(2){
-            grid-row: span 1;
-            grid-column: span 2;
-        }
-        &:nth-of-type(3){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(4){
-            grid-row: span 1;
-            grid-column: span 3;
-        }
-        &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7){
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-        &:nth-of-type(8){
-            grid-row: span 1;
-            grid-column: span 2;
-        }
-        &:nth-of-type(9){
-            grid-row: span 2;
-            grid-column: span 1;
-        }
-        &:nth-of-type(10){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(11){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(12){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(13), &:nth-last-of-type(14), &:nth-last-of-type(15){
-            grid-row: span 1;
-            grid-column: span 3;
-        }
-        &:nth-of-type(16){
-            grid-row: span 2;
-            grid-column: span 1;
-        }
-        &:nth-of-type(17){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(18){
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-        &:nth-of-type(19){
-            grid-row: span 1;
-            grid-column: span 2;
-        }
-        &:nth-of-type(20){
-            grid-row: span 2;
-            grid-column: span 1;
-        }
-        &:nth-of-type(21){
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        &:nth-of-type(22){
-            grid-row: span 1;
-            grid-column: span 2;
-        }
-        &:nth-of-type(23){
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-        */ }
-  .history .r1c1 {
-    grid-row: span 1;
-    grid-column: span 1; }
-  .history .r1c2 {
-    grid-row: span 1;
-    grid-column: span 2; }
-  .history .r1c3 {
-    grid-row: span 1;
-    grid-column: span 3; }
-  .history .r2c1 {
-    grid-row: span 2;
-    grid-column: span 1; }
-  .history .r2c2 {
-    grid-row: span 2;
-    grid-column: span 2; }
+    background-color: #9993b2;
+    color: #f7f7f7; }
+    .grid__item:nth-child(9) {
+      grid-column: span 2;
+      grid-row: span 2; }
+    .grid__item:nth-child(13) {
+      grid-column: span 3;
+      grid-row: span 2; }
 
 /*# sourceMappingURL=style.css.map */
