@@ -246,6 +246,12 @@ Example of Cross browser
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/ngu9h042/)
 
+### Practice 26
+
+Window gallery - Flexbox + Grid
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/89qjnxpb/)
+
 
 
 
