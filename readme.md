@@ -234,6 +234,18 @@ Just a simple practice about the behavior of grid-columns and grid-rows
 
 [link to practice](https://jsfiddle.net/rodrigoarreola/184uLt59/)
 
+### Practice 24
+
+A practice about the responsive design with CSS Grid
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/rzghmw38/)
+
+### Practice 25
+
+Example of Cross browser
+
+[link to practice](https://jsfiddle.net/rodrigoarreola/ngu9h042/)
+
 
 
 
